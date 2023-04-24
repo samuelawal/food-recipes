@@ -7,11 +7,7 @@ interface ContextProps extends MealStateTypes {
     fETCH_CATEGORIES_MEAL: (dispatch: Dispatch<Meal_Action_Type>) => void
 }
 
-export interface ContextType {
-    state: MealStateTypes;
-    dispatch: Dispatch<Meal_Action_Type>;
-    fETCH_CATEGORIES_MEAL: () => void;
-}
+
 export const MealContext = createContext<ContextProps>({} as ContextProps);
 const initialState : MealStateTypes = {
     categories: [],

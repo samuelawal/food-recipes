@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 import { MealContext} from '../../context/mealContext'
+import NavBar from '../../components/NavBar/NavBar'
+import ContainerBanner from '../../components/ContainerBanner/ContainerBanner'
+import CategoryMeal from '../../components/CategoryMeal/CategoryMeal'
 const Home = () => {
   const {categories} = useContext(MealContext)
   return (
-      <div>
-        {categories.map(category => {
-          return (
-            <p key={category.idCategory}>{category.strCategory}</p>
-          )
-        })}
-       </div>
+    <React.Fragment>
+        <NavBar/>
+        <ContainerBanner/>
+        <CategoryMeal  {...{categories}}/>
+       </React.Fragment>
   )
 }
 

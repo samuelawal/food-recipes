@@ -1,0 +1,21 @@
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.food_card{
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
+    transition: .8s;
+}
+.food_card:hover{
+    transform: scale(1.1);
+}
+.food_title{
+    font-size: 1.2rem;
+    
+    font-weight: 700;
+    text-align: center;
+}
